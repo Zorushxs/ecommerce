@@ -84,7 +84,7 @@ public class CartServiceImpl implements CartService {
         if (existingTask != null && !existingTask.isDone()) {
             existingTask.cancel(false); // Cancel the existing task if it's still active, to avoid that executes
         }
-        ScheduledFuture<?> newTask = executor.schedule(() -> cleanUp(cartId), 90, TimeUnit.SECONDS);
+        ScheduledFuture<?> newTask = executor.schedule(() -> cleanUp(cartId), 600000, TimeUnit.MINUTES);
         cleanupTask.put(cartId, newTask);
     }
 
@@ -92,7 +92,7 @@ public class CartServiceImpl implements CartService {
         long now = System.currentTimeMillis();
         log.debug("Service - cleanUp() - now: {}", now);
         Cart cart = carts.get(cartId);
-        if (cart != null && now - cart.getLastActivityTime() > 90000) {
+        if (cart != null && now - cart.getLastActivityTime() > 600000) {
             carts.remove(cartId);
             log.debug("Service - cleanUp() - Cart {} removed due to inactivity. - Carts: {}", cartId, carts);
         } else {
