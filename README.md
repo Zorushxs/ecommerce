@@ -90,13 +90,49 @@ mvn test
 
 ##  Using the API
 
+Here you will see the coded enpoints and it's parameters to try them (cURL). The URLs are intended to be run locally on port 8080, please modify them if necessary.
+You must modify cartId and the product to the data you obtain when you prove. 
+Products are not generated, you should generate them:
+- '{
+  "id": 234,
+  "description": "jacket",
+  "amount": 45
+  }'
+
 - Create a Shopping Cart
   Endpoint:
 ```sh
-POST /carts
+curl --location --request POST 'http://localhost:8080/carts' \
+--data ''
 ```
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
+
+- Get a Shopping Cart with it's id
+  Endpoint:
+```sh
+curl --location 'http://localhost:8080/carts/c2a42a98-0db4-45f1-867c-609de483ad3c' \
+--header 'cart;' \
+--data ''
+```
+
+- Add a product on a Cart
+  Endpoint:
+```sh
+curl --location 'http://localhost:8080/carts/c2a42a98-0db4-45f1-867c-609de483ad3c/products' \
+--header 'cart;' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 234,
+    "description": "jacket",
+    "amount": 45
+}'
+```
+- Delete a Cart and all it's products
+  Endpoint:
+```sh
+curl --location --request POST 'http://localhost:8080/carts/bbd7a221-3218-4a82-9c85-99fcc34319a9' \
+--header 'cart;' \
+--data ''
+```
 
 ---
 
