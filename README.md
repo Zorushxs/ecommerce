@@ -93,7 +93,7 @@ mvn test
 Here you will see the coded enpoints and its parameters to try them (cURL). The URLs are intended to be run locally on port 8080, please modify them if necessary.
 You must modify cartId and the product to the data you obtain when you prove. 
 Products are not generated, you should generate them:
-- '{
+> '{
   "id": 234,
   "description": "jacket",
   "amount": 45
