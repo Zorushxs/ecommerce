@@ -1,114 +1,250 @@
-E-commerce Application
-Este proyecto es una aplicación de comercio electrónico que gestiona carritos de compras y productos.
+<p align="center">
+  <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
+</p>
+<p align="center">
+    <h1 align="center">ECOMMERCE</h1>
+</p>
+<p align="center">
+    <em>HTTP error 401 for prompt `slogan`</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/Zorushxs/ecommerce?style=flat&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/Zorushxs/ecommerce?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/Zorushxs/ecommerce?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/Zorushxs/ecommerce?style=flat&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+		<em>Developed with the software and tools below.</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white" alt="java">
+</p>
+<hr>
 
-Funcionalidades
-Crear un carrito de compras
-Obtener un carrito de compras por ID
-Agregar un producto a un carrito de compras
-Eliminar un carrito de compras
-Tecnologías Utilizadas
-Java 17
-Spring Boot 3.3.1
-Maven
-Lombok
-SLF4J para logging
-Instalación y Ejecución
-Clonar el Repositorio:
+##  Quick Links
 
-bash
-Copiar código
-git clone https://github.com/tu-usuario/ecommerce.git
+> - [ Overview](#-overview)
+> - [ Features](#-features)
+> - [ Repository Structure](#-repository-structure)
+> - [ Modules](#-modules)
+> - [ Getting Started](#-getting-started)
+>   - [ Installation](#-installation)
+>   - [ Running ecommerce](#-running-ecommerce)
+>   - [ Tests](#-tests)
+> - [ Project Roadmap](#-project-roadmap)
+> - [ Contributing](#-contributing)
+> - [ License](#-license)
+> - [ Acknowledgments](#-acknowledgments)
+
+---
+
+##  Overview
+
+HTTP error 401 for prompt `overview`
+
+---
+
+##  Features
+
+HTTP error 401 for prompt `features`
+
+---
+
+##  Repository Structure
+
+```sh
+└── ecommerce/
+    ├── README.md
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    └── src
+        ├── main
+        │   ├── java
+        │   │   └── com
+        │   │       └── onebox
+        │   └── resources
+        │       └── application.properties
+        └── test
+            └── java
+                └── com
+                    └── onebox
+```
+
+---
+
+##  Modules
+
+<details closed><summary>.</summary>
+
+| File                                                                   | Summary                              |
+| ---                                                                    | ---                                  |
+| [mvnw.cmd](https://github.com/Zorushxs/ecommerce/blob/master/mvnw.cmd) | HTTP error 401 for prompt `mvnw.cmd` |
+| [pom.xml](https://github.com/Zorushxs/ecommerce/blob/master/pom.xml)   | HTTP error 401 for prompt `pom.xml`  |
+| [mvnw](https://github.com/Zorushxs/ecommerce/blob/master/mvnw)         | HTTP error 401 for prompt `mvnw`     |
+
+</details>
+
+<details closed><summary>src.main.java.com.onebox.ecommerce</summary>
+
+| File                                                                                                                                        | Summary                                                                                  |
+| ---                                                                                                                                         | ---                                                                                      |
+| [EcommerceApplication.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/EcommerceApplication.java) | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/EcommerceApplication.java` |
+
+</details>
+
+<details closed><summary>src.main.java.com.onebox.ecommerce.web</summary>
+
+| File                                                                                                                                | Summary                                                                                |
+| ---                                                                                                                                 | ---                                                                                    |
+| [CartController.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/web/CartController.java) | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/web/CartController.java` |
+
+</details>
+
+<details closed><summary>src.main.java.com.onebox.ecommerce.api</summary>
+
+| File                                                                                                                  | Summary                                                                         |
+| ---                                                                                                                   | ---                                                                             |
+| [CartApi.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/api/CartApi.java) | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/api/CartApi.java` |
+
+</details>
+
+<details closed><summary>src.main.java.com.onebox.ecommerce.api.domain</summary>
+
+| File                                                                                                                         | Summary                                                                                |
+| ---                                                                                                                          | ---                                                                                    |
+| [Cart.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/api/domain/Cart.java)       | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/api/domain/Cart.java`    |
+| [Product.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/api/domain/Product.java) | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/api/domain/Product.java` |
+
+</details>
+
+<details closed><summary>src.main.java.com.onebox.ecommerce.service</summary>
+
+| File                                                                                                                              | Summary                                                                                 |
+| ---                                                                                                                               | ---                                                                                     |
+| [CartService.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/service/CartService.java) | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/service/CartService.java` |
+
+</details>
+
+<details closed><summary>src.main.java.com.onebox.ecommerce.service.impl</summary>
+
+| File                                                                                                                                           | Summary                                                                                          |
+| ---                                                                                                                                            | ---                                                                                              |
+| [CartServiceImpl.java](https://github.com/Zorushxs/ecommerce/blob/master/src/main/java/com/onebox/ecommerce/service/impl/CartServiceImpl.java) | HTTP error 401 for prompt `src/main/java/com/onebox/ecommerce/service/impl/CartServiceImpl.java` |
+
+</details>
+
+<details closed><summary>src.test.java.com.onebox.ecommerce</summary>
+
+| File                                                                                                                                                  | Summary                                                                                       |
+| ---                                                                                                                                                   | ---                                                                                           |
+| [EcommerceApplicationTests.java](https://github.com/Zorushxs/ecommerce/blob/master/src/test/java/com/onebox/ecommerce/EcommerceApplicationTests.java) | HTTP error 401 for prompt `src/test/java/com/onebox/ecommerce/EcommerceApplicationTests.java` |
+
+</details>
+
+---
+
+##  Getting Started
+
+***Requirements***
+
+Ensure you have the following dependencies installed on your system:
+
+* **Java**: `version x.y.z`
+
+###  Installation
+
+1. Clone the ecommerce repository:
+
+```sh
+git clone https://github.com/Zorushxs/ecommerce
+```
+
+2. Change to the project directory:
+
+```sh
 cd ecommerce
-Compilar y Empaquetar con Maven:
+```
 
-go
-Copiar código
-mvn clean package
-Ejecutar la Aplicación:
+3. Install the dependencies:
 
-bash
-Copiar código
-java -jar target/ecommerce-0.0.1-SNAPSHOT.jar
-La aplicación se ejecutará en http://localhost:8080.
+```sh
+mvn clean install
+```
 
-Uso de la API
-Crear un Carrito de Compras
-Endpoint:
+###  Running ecommerce
 
-bash
-Copiar código
-POST /carts
-Ejemplo de Solicitud:
+Use the following command to run ecommerce:
 
-json
-Copiar código
-curl -X POST http://localhost:8080/carts
-Respuesta Exitosa:
+```sh
+java -jar target/myapp.jar
+```
 
-json
-Copiar código
-{
-  "id": "d2b3b4de-9786-4c45-a3b5-907e357c6c1e",
-  "products": [],
-  "lastActivityTime": 1642751241737
-}
-Obtener un Carrito de Compras
-Endpoint:
+###  Tests
 
-bash
-Copiar código
-GET /carts/{cartId}
-Ejemplo de Solicitud:
+To execute tests, run:
 
-json
-Copiar código
-curl -X GET http://localhost:8080/carts/d2b3b4de-9786-4c45-a3b5-907e357c6c1e
-Respuesta Exitosa:
+```sh
+mvn test
+```
 
-json
-Copiar código
-{
-  "id": "d2b3b4de-9786-4c45-a3b5-907e357c6c1e",
-  "products": [],
-  "lastActivityTime": 1642751241737
-}
-Agregar un Producto a un Carrito de Compras
-Endpoint:
+---
 
-bash
-Copiar código
-POST /carts/{cartId}/products
-Ejemplo de Solicitud:
+##  Project Roadmap
 
-json
-Copiar código
-curl -X POST -H "Content-Type: application/json" -d '{"id": 1, "description": "Product A", "amount": 10}' http://localhost:8080/carts/d2b3b4de-9786-4c45-a3b5-907e357c6c1e/products
-Respuesta Exitosa:
+- [X] `► INSERT-TASK-1`
+- [ ] `► INSERT-TASK-2`
+- [ ] `► ...`
 
-Copiar código
-HTTP/1.1 200 OK
-Eliminar un Carrito de Compras
-Endpoint:
+---
 
-bash
-Copiar código
-DELETE /carts/{cartId}
-Ejemplo de Solicitud:
+##  Contributing
 
-json
-Copiar código
-curl -X DELETE http://localhost:8080/carts/d2b3b4de-9786-4c45-a3b5-907e357c6c1e
-Respuesta Exitosa:
+Contributions are welcome! Here are several ways you can contribute:
 
-Copiar código
-HTTP/1.1 200 OK
-Contribución
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+- **[Submit Pull Requests](https://github.com/Zorushxs/ecommerce/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github.com/Zorushxs/ecommerce/discussions)**: Share your insights, provide feedback, or ask questions.
+- **[Report Issues](https://github.com/Zorushxs/ecommerce/issues)**: Submit bugs found or log feature requests for Ecommerce.
 
-Haz un fork del proyecto
-Crea una rama para tu feature (git checkout -b feature/NuevaCaracteristica)
-Commit de tus cambios (git commit -am 'Añadida NuevaCaracteristica')
-Push a la rama (git push origin feature/NuevaCaracteristica)
-Crea un nuevo Pull Request
-Licencia
-Este proyecto está bajo la licencia MIT - ver el archivo LICENSE.md para más detalles.
+<details closed>
+    <summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
+   ```sh
+   git clone https://github.com/Zorushxs/ecommerce
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to GitHub**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+
+Once your PR is reviewed and approved, it will be merged into the main branch.
+
+</details>
+
+---
+
+##  License
+
+This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+
+---
+
+##  Acknowledgments
+
+- List any resources, contributors, inspiration, etc. here.
+
+[**Return**](#-quick-links)
+
+---
