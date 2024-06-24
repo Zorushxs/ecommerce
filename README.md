@@ -4,9 +4,7 @@
 <p align="center">
     <h1 align="center">ECOMMERCE</h1>
 </p>
-<p align="center">
-    <em>HTTP error 401 for prompt `slogan`</em>
-</p>
+
 <p align="center">
 	<img src="https://img.shields.io/github/license/Zorushxs/ecommerce?style=flat&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/Zorushxs/ecommerce?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
