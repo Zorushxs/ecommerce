@@ -1,5 +1,6 @@
 package com.onebox.ecommerce.web;
 
+import com.onebox.ecommerce.api.CartApi;
 import com.onebox.ecommerce.api.domain.Cart;
 import com.onebox.ecommerce.api.domain.Product;
 import com.onebox.ecommerce.service.CartService;
@@ -11,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/carts")
-public class CartController {
+public class CartController implements CartApi {
 
     private static final Logger log = LoggerFactory.getLogger(CartController.class);
     @Autowired
     private CartService cartService;
 
-    @PostMapping
+    @Override
     public ResponseEntity<Cart> createCart() {
 
         Cart cart = cartService.createCart();
@@ -26,8 +27,8 @@ public class CartController {
         return ResponseEntity.ok(cart);
     }
 
-    @GetMapping("/{cartId}")
-    public ResponseEntity<Cart> getCart(@PathVariable String cartId) {
+    @Override
+    public ResponseEntity<Cart> getCart(String cartId) {
 
         Cart cart = cartService.getCart(cartId);
         log.debug("Controller - getCart() - Cart: {}", cart);
@@ -35,8 +36,8 @@ public class CartController {
         return cart != null ? ResponseEntity.ok(cart) : ResponseEntity.notFound().build();
     }
 
-    @PostMapping("/{cartId}/products")
-    public ResponseEntity<Void> addProductToCart(@PathVariable String cartId, @RequestBody Product product) {
+    @Override
+    public ResponseEntity<Void> addProductToCart(String cartId, Product product) {
 
         Product productAdded = cartService.addProductToCart(cartId, product);
         log.debug("Controller - addProductToCart() - Cart: {}", cartService.getCart(cartId));
@@ -44,8 +45,8 @@ public class CartController {
         return productAdded != null ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 
-    @PostMapping("/{cartId}")
-    public ResponseEntity<Void> deleteCart(@PathVariable String cartId) {
+    @Override
+    public ResponseEntity<Void> deleteCart(String cartId) {
 
         cartService.deleteCart(cartId);
         log.debug("Controller - deleteCart() - Carts: {}", cartService.getCarts());
