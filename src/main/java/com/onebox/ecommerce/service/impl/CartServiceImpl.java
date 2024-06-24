@@ -58,7 +58,7 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public void addProductToCart(String cartId, Product product) {
+    public Product addProductToCart(String cartId, Product product) {
 
         Cart cart = getCart(cartId);
 
@@ -68,6 +68,10 @@ public class CartServiceImpl implements CartService {
             log.debug("Service - addProductToCart() - Carts: {}", carts);
             startCleanupTask(cartId);
             log.debug("Service - addProductToCart() - cleanupTask: {}", cleanupTask);
+
+            return product;
+        } else {
+            return null;
         }
 
     }
@@ -84,7 +88,7 @@ public class CartServiceImpl implements CartService {
         if (existingTask != null && !existingTask.isDone()) {
             existingTask.cancel(false); // Cancel the existing task if it's still active, to avoid that executes
         }
-        ScheduledFuture<?> newTask = executor.schedule(() -> cleanUp(cartId), 600000, TimeUnit.MINUTES);
+        ScheduledFuture<?> newTask = executor.schedule(() -> cleanUp(cartId), 10, TimeUnit.MINUTES);
         cleanupTask.put(cartId, newTask);
     }
 

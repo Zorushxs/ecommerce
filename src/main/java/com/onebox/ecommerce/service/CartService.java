@@ -13,7 +13,7 @@ public interface CartService {
 
     public Cart getCart(String cartId);
 
-    public void addProductToCart(String cartId, Product product);
+    public Product addProductToCart(String cartId, Product product);
 
     public void deleteCart(String cartId);
 

@@ -38,10 +38,10 @@ public class CartController {
     @PostMapping("/{cartId}/products")
     public ResponseEntity<Void> addProductToCart(@PathVariable String cartId, @RequestBody Product product) {
 
-        cartService.addProductToCart(cartId, product);
+        Product productAdded = cartService.addProductToCart(cartId, product);
         log.debug("Controller - addProductToCart() - Cart: {}", cartService.getCart(cartId));
 
-        return ResponseEntity.ok().build();
+        return productAdded != null ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 
     @PostMapping("/{cartId}")
